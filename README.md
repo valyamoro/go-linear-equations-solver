@@ -2,6 +2,8 @@
 
 This project solves systems of linear equations and generates an interactive HTML chart using Plotly.js.
 
+![Demo Chart](assets/screenshot.png)
+
 ## Running
 
 The project consists of multiple Go files. To run, use one of the following commands in the project directory:
