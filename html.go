@@ -307,7 +307,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <!-- Status -->
     <div class="sidebar-section">
-      <div class="section-label">Результат</div>
+      <div class="section-label">Result</div>
       {{if .IsEmpty}}
       <div class="status-box fail">
         <span class="status-icon">✗</span>
@@ -316,7 +316,7 @@ const htmlTemplate = `<!DOCTYPE html>
       {{else}}
       <div class="status-box ok">
         <span class="status-icon">✓</span>
-        Найдены решения
+        Solutions found
       </div>
       {{end}}
     </div>
@@ -324,7 +324,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <!-- Solutions -->
     {{if not .IsEmpty}}
     <div class="sidebar-section">
-      <div class="section-label">Решения ({{len .Solutions}})</div>
+      <div class="section-label">Solutions ({{len .Solutions}})</div>
       <div class="sol-list">
         {{range .Solutions}}
         <div class="sol-row">{{fmtPt .X .Y}}</div>
@@ -335,7 +335,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
     <!-- Viewport -->
     <div class="sidebar-section">
-      <div class="section-label">Область просмотра</div>
+      <div class="section-label">View range</div>
       <div class="range-row">
         <div class="range-item"><strong>x</strong> ∈ [{{fmtF .XMin}}, {{fmtF .XMax}}]</div>
         <div class="range-item"><strong>y</strong> ∈ [{{fmtF .YMin}}, {{fmtF .YMax}}]</div>

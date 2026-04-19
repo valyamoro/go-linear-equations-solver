@@ -1,8 +1,8 @@
 # Linear Equations Solver
 
-This project solves systems of linear equations and generates an interactive HTML chart using Plotly.js.
+A Go command-line tool that parses linear equations, computes intersection points, and exports an interactive Plotly.js HTML visualization.
 
-![Demo Chart](assets/screenshot.png)
+![Demo Chart](assets/image.png)
 
 ## Running
 
@@ -16,9 +16,6 @@ go run .
 
 # Run all .go files
 go run *.go
-
-# Run with explicit file listing
-go run main.go types.go parsing.go geometry.go utils.go visualization.go html.go
 ```
 
 ### Examples with parameters
@@ -54,16 +51,6 @@ If no equations are specified with `-i`, the built-in example is used:
 - 2x + 2y = 8
 - x + y - 2 = 2
 
-## File structure
-
-- `main.go`: Entry point, argument parsing, HTML rendering
-- `types.go`: Data structure definitions
-- `parsing.go`: Equation string parsing
-- `geometry.go`: Intersection and solution calculations
-- `utils.go`: Helper functions
-- `visualization.go`: Chart data construction
-- `html.go`: HTML template with CSS and JavaScript
-
 ## Output
 
 The program outputs:
@@ -85,16 +72,8 @@ Equations not specified — using built-in example.
   → Saved: tmp/equations.html
 ```
 
-## GitHub Repository
-
-To create a GitHub repository:
-
-1. Go to [GitHub](https://github.com) and create a new repository.
-2. Copy the repository URL.
-3. In the project directory, run:
-   ```bash
-   git remote add origin <repository-url>
-   git push -u origin master
-   ```
-
-The `.gitignore` file excludes temporary files, generated HTML files, and the `tmp/` directory.
+## Contact
+```
+Telegram: @gof4rvr
+Email: r3ndyhell@gmail.com
+```

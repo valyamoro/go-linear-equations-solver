@@ -44,12 +44,12 @@ func main() {
 	var out string
 	var xmin, xmax, ymin, ymax float64
 
-	flag.Var(&rawEqs, "i", "Уравнение (параметр повторяется). Пример: -i 'x+y=4'")
+	flag.Var(&rawEqs, "i", "Equation (repeatable). Example: -i 'x+y=4'")
 	flag.StringVar(&out, "o", "tmp/equations.html", "Output HTML file")
-	flag.Float64Var(&xmin, "xmin", -10, "Нижняя граница оси X")
-	flag.Float64Var(&xmax, "xmax", 10, "Верхняя граница оси X")
-	flag.Float64Var(&ymin, "ymin", -10, "Нижняя граница оси Y")
-	flag.Float64Var(&ymax, "ymax", 10, "Верхняя граница оси Y")
+	flag.Float64Var(&xmin, "xmin", -10, "Minimum X axis value")
+	flag.Float64Var(&xmax, "xmax", 10, "Maximum X axis value")
+	flag.Float64Var(&ymin, "ymin", -10, "Minimum Y axis value")
+	flag.Float64Var(&ymax, "ymax", 10, "Maximum Y axis value")
 	flag.Parse()
 
 	if len(rawEqs) == 0 {
