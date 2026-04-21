@@ -24,6 +24,7 @@ func ParseEquation(s string) (Equation, error) {
 	if err != nil {
 		return Equation{}, fmt.Errorf("LHS %q: %w", lhsRaw, err)
 	}
+	
 	return Equation{A: a, B: b, C: rhs - lhsConst, Original: s}, nil
 }
 

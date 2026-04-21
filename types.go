@@ -18,13 +18,13 @@ func (f *stringsFlag) String() string     { return strings.Join(*f, ", ") }
 func (f *stringsFlag) Set(v string) error { *f = append(*f, v); return nil }
 
 type PageData struct {
-	TracesJSON   template.JS
-	LayoutJSON   template.JS
-	Equations    []EqInfo
-	Solutions    []VertexInfo
-	IsEmpty      bool
-	XMin, XMax   float64
-	YMin, YMax   float64
+	TracesJSON template.JS
+	LayoutJSON template.JS
+	Equations  []EqInfo
+	Solutions  []VertexInfo
+	IsEmpty    bool
+	XMin, XMax float64
+	YMin, YMax float64
 }
 
 // EqInfo drives one row in the sidebar equation list.

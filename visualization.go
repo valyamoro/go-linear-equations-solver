@@ -94,7 +94,7 @@ func buildPageData(eqs []Equation, xmin, xmax, ymin, ymax float64) (PageData, er
 			"bordercolor": "rgba(100,150,220,0.15)",
 			"borderwidth": 1,
 			"font":        m{"color": "#8ba8cc", "size": 11, "family": "'Space Mono', monospace"},
-			"x": 0.01, "y": 0.99,
+			"x":           0.01, "y": 0.99,
 			"xanchor": "left", "yanchor": "top",
 		},
 		"margin":    m{"l": 55, "r": 25, "t": 25, "b": 55},

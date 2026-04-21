@@ -59,11 +59,12 @@ func main() {
 			"2x + 2y = 8",
 			"x + y - 2 = 2",
 		}
+
 		fmt.Println("Equations not specified — using built-in example.")
 	}
 
 	fmt.Println()
-	fmt.Println("  Parsing equations:")
+	fmt.Println("Parsing equations:")
 	eqs := make([]Equation, 0, len(rawEqs))
 	for _, s := range rawEqs {
 		eq, err := ParseEquation(s)
@@ -71,8 +72,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "  error parsing %q: %v\n", s, err)
 			os.Exit(1)
 		}
-		fmt.Printf("  %-30s  →  A=%-6g B=%-6g C=%-6g\n",
-			s, eq.A, eq.B, eq.C)
+		fmt.Printf("  %-30s  →  A=%-6g B=%-6g C=%-6g\n", s, eq.A, eq.B, eq.C)
 		eqs = append(eqs, eq)
 	}
 	fmt.Println()
@@ -89,12 +89,14 @@ func main() {
 	}
 
 	if pd.IsEmpty {
-		fmt.Printf("  System incompatible — no solutions.\n")
+		fmt.Printf("System incompatible — no solutions.\n")
 	} else {
-		fmt.Printf("  Found %d solutions:\n", len(pd.Solutions))
+		fmt.Printf("Found %d solutions:\n", len(pd.Solutions))
 		for _, v := range pd.Solutions {
-			fmt.Printf("      (%g, %g)\n", v.X, v.Y)
+			fmt.Printf("  (%g, %g)\n", v.X, v.Y)
 		}
 	}
-	fmt.Printf("\n  → Saved: %s\n\n", out)
+
+	fmt.Println()
+	fmt.Printf("Saved: %s\n\n", out)
 }
